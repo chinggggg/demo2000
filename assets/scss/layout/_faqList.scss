@@ -1,0 +1,59 @@
+
+.faq-list{
+        padding: calc($body-py * 0.5) 0;
+        scroll-margin: 110px;
+        .collapse-group{
+            margin: 0;
+            h4{
+                @include h6;
+                font-weight: 500;
+                padding: 16px 0;
+                padding-right: 4px;
+                @media (min-width: map-get($grid-breakpoints, "sm")) {
+                    @include h5;
+                    padding: 20px 0;
+                    padding-right: 8px;
+                }
+                @media (min-width: map-get($grid-breakpoints, "xl")) {
+                    @include h4;
+                }
+            }
+            ul{
+                margin-bottom: 24px;
+
+                li{
+                    @include h6;
+                    letter-spacing: 0.5px;
+                    text-indent: 0.5px;
+                    line-height: 160%;
+                    color: $gray-800;
+                    width: 100%;
+                    @media (min-width: map-get($grid-breakpoints, "lg")) {
+                        @include h5;
+                        line-height: 180%;
+                    }
+                    h6{
+                        letter-spacing: 0.5px;
+                        text-indent: 0.5px;
+                        line-height: 160%;
+                        color: $gray-800;
+                        padding: 4px 0;
+                        display: flex;
+                        align-items: center;
+                        @media (min-width: map-get($grid-breakpoints, "lg")) {
+                            @include h5;
+                            line-height: 180%;
+                        }
+                    }
+
+                    .title{
+                        font-weight: 500;
+                        margin-top: 12px;
+                    }
+                    a{
+                        color: $blue-600;
+                    }
+                }
+            }
+        }
+    }

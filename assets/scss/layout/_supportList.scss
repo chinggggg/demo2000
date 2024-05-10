@@ -1,0 +1,47 @@
+
+.more-support{
+    padding: calc($body-py * 1) 0 calc($body-py);
+    background: $bgc;
+    .list{
+        columns: 2 auto;
+        @media (min-width: map-get($grid-breakpoints, "md")) {
+                columns: 2 auto;
+        }
+        @media (min-width: map-get($grid-breakpoints, "xl")) {
+                columns: 3 auto;
+                break-inside: avoid;
+        }
+        @media (min-width: map-get($grid-breakpoints, "xxl")) {
+                columns: 4 auto;
+                break-inside: avoid;
+        }
+
+
+        .list-group{
+            display: inline-block;
+            h5{
+                @include h6;
+                font-weight: 600;
+                margin-bottom: 8px;
+                margin-top: 32px;
+                @media (min-width: map-get($grid-breakpoints, "xl")) {
+                    @include h5;
+                }
+
+            }
+
+            li{
+                a{
+                    padding: 8px 0;
+                    color: $primary;
+                    line-height: 1.4;
+
+                    &:hover{
+                        color: $primary-800;
+                    }
+                }
+            }
+        }
+    }
+
+}

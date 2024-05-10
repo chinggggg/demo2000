@@ -1,0 +1,444 @@
+.feature-wrapper{
+    padding: calc($body-py * 0.6 ) 0 calc($body-py * 0.6 ) 0 ;
+    scroll-margin: 48px;
+
+    .wrapper-title{
+        margin-bottom: calc($body-py * 0.5);
+        h2{
+            font-weight: 600;
+            text-align: center;
+            color: $primary-700;
+            margin-bottom: 4px;
+            @media (min-width: map-get($grid-breakpoints, "lg")) {
+                font-size: 40px;
+            }
+        }
+
+        h5{
+            @include h6;
+            text-align: center;
+            color: $gray-700;
+            @media (min-width: map-get($grid-breakpoints, "lg")) {
+                @include h5;
+            }
+        }
+    }
+    .info-card{
+        padding: 20px;
+        background: linear-gradient(130deg, rgba(20, 28, 49, 0.6) ,  transparent 25%), linear-gradient(130deg, #090e1c, $black);
+        border-radius: $border-radius-xl;
+        min-height: 250px;
+        overflow: hidden;
+        position: relative;
+        display: flex;
+        flex-direction: column;
+        margin-bottom: 16px;
+        box-shadow: $box-shadow-lg ;
+
+        h3{
+            margin-bottom: 4px;
+            position: relative;
+            z-index: 2;
+            letter-spacing: 0.5px;
+            text-indent: 0.5px;
+
+        }
+        h6{
+            width: 100%;
+            position: relative;
+            z-index: 2;
+            margin-bottom: 110px;
+            @media (min-width: map-get($grid-breakpoints, "lg")) {
+                margin-bottom: 0px;
+            }
+        }
+        img{
+            position: absolute;
+            object-fit: contain;
+            // object-fit: scale-down;
+            object-position: right bottom;
+            right: 0;
+            bottom: 16px;
+            height: 48%;
+            width: 100%;
+            opacity: 0.5;
+
+            &.poa-b{
+                transform: translateY(0%);
+                bottom: 0;
+                top: unset;
+            }
+
+        }
+        .img-block{
+            position: absolute;
+            left: 70%;
+            bottom: 0;
+            width: 0%;
+            height: 40%;
+            opacity: 0.6;
+            background: rgba(245, 167, 111, 0.3);
+            animation:block 5s ease-in infinite ;
+
+        }
+
+        @keyframes block {
+            0%{
+                width: 0%;
+            }
+            15%{
+                border-left: 1px solid #89862f00;
+                width: 0%;
+            }
+            20%{
+                border-left: 1px solid #89862F;
+            }
+            40%{
+                width: 24%;
+                border-right: 1px solid #89862F;
+                border-left: 1px solid #89862F;
+            }
+            100%{
+                width: 24%;
+                border-right: 1px solid #89862F;
+                border-left: 1px solid #89862F;
+            }
+
+        }
+        @media (min-width: map-get($grid-breakpoints, "lg")) {
+            padding: 30px;
+            min-height: 300px;
+            justify-content: center;
+            margin-bottom: 32px;
+            h6{
+                width: 48%;
+            }
+            img{
+                height: 200px;
+                top: 50%;
+                transform: translateY(-50%);
+                opacity: 1;
+
+                &.poa-b{
+                    transform: translateY(0%);
+                    bottom: 0;
+                    top: unset;
+                }
+            }
+            .img-block{
+                height: 80%;
+                opacity: 1;
+            }
+        }
+    }
+    .more-info-card{
+        padding: 20px 16px;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        @media (min-width: map-get($grid-breakpoints, "lg")) {
+            align-items: flex-start;
+            padding: 20px 0;
+        }
+        img{
+                object-fit: contain;
+                height: 60px;
+                padding-left: 8px;
+                @media (min-width: map-get($grid-breakpoints, "lg")) {
+                    padding-left: 0px;
+                }
+
+        }
+        h4{
+            font-weight: 600;
+            margin-bottom: 4px;
+
+            color: $primary-800;
+
+        }
+        h6{
+            color: $gray-700;
+            text-align: center;
+            @media (min-width: map-get($grid-breakpoints, "lg")) {
+               text-align: left;
+            }
+        }
+    }
+
+    &.stock-picking{
+        background: url("/assets/images/bg1.png"), linear-gradient($bgc 60%, $primary-50);
+        background-size: cover;
+        .info-card{
+            justify-content: flex-start;
+            h3{
+                color: $white;
+
+            }
+            h6{
+                color: $white;
+                opacity: 0.8;
+            }
+            img.info-icon{
+                position: relative;
+                top: unset;
+                left: unset;
+                right: unset;
+                bottom: unset;
+                width: 60px;
+                height: 60px;
+                transform:unset;
+                margin-bottom: 4px;
+                opacity: 1;
+            }
+
+            @media (min-width: map-get($grid-breakpoints, "lg")) {
+                border-radius: 24px;
+            }
+        }
+    }
+    &.indicators{
+        background: $white;
+        padding: calc($body-py * 1 ) 0 ;
+        .info-card{
+            justify-content: flex-start;
+            background-color: $primary-100;
+            box-shadow: unset;
+            @media (min-width: map-get($grid-breakpoints, "lg")) {
+                min-height: 320px;
+            }
+
+            h3{
+                @media (min-width: map-get($grid-breakpoints, "xl")) {
+                    font-size: 36px;
+                    font-weight: 600;
+                    color: $primary-700;
+                }
+            }
+            h6{
+                width: 100%;
+            }
+            img{
+                bottom: 0px;
+                right: 0px;
+                top: unset;
+                height: 50%;
+                width: 90%;
+                opacity: 1;
+                transform: unset;
+                @media (min-width: map-get($grid-breakpoints, "lg")) {
+                    right: 0px;
+                    height: 66%;
+                    width: 80%;
+                }
+            }
+            &[data-card="1"]{
+                background:  linear-gradient(150deg, $primary-100 50%, $primary-200);
+                @media (min-width: map-get($grid-breakpoints, "lg")) {
+                    min-height: 400px;
+                }
+                h6{
+                    @media (min-width: map-get($grid-breakpoints, "lg")) {
+                        width: 40%;
+                    }
+                }
+
+                img{
+                    width: 70%;
+                    right: 20px;
+                    bottom: -20px;
+                    @media (min-width: map-get($grid-breakpoints, "lg")) {
+                        height: 110%;
+                        width: 50%;
+                        right: 30px;
+                        bottom: -72px;
+                    }
+                }
+            }
+            &[data-card="2"]{
+                background: #D6E2F9;
+
+            }
+            &[data-card="3"]{
+                background: #E6E6FC;
+            }
+            &[data-card="4"]{
+                background: linear-gradient(150deg, $primary-100 50%, $primary-200);
+            }
+            &[data-card="5"]{
+                // background-color: #def5e4;
+                background: linear-gradient(150deg, #e2f6e8 50%, #cae3d0);
+            }
+        }
+    }
+    &.teachers{
+        background: url("/assets/images/bg1.png"),  $bgc-blue;
+        .sub-nav{
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            a{
+                padding: 4px;
+                transition: .25s;
+                position: relative;
+                img{
+                    width: 100%;
+                    height: 100%;
+                }
+                &:hover{
+                    transform: scale(1.1);
+                }
+                @media (min-width: map-get($grid-breakpoints, "lg")) {
+                    padding: 20px;
+                    margin-bottom: 20px;
+                    img{
+                        width: 120px;
+                        height: 120px;
+                        width: 100%;
+                        height: 100%;
+                    }
+                }
+                h6{
+                    position: absolute;
+                    bottom: 32px;
+                    left: 32px;
+                    font-weight: 600;
+                    color: $white;
+                    margin-top: 12px;
+                    text-shadow: 1px 1px 10px rgba(0, 0, 0, 0.3);
+                    display: none;
+                    @media (min-width: map-get($grid-breakpoints, "lg")) {
+                        @include small;
+                        display: block;
+                    }
+                    @media (min-width: map-get($grid-breakpoints, "xl")) {
+                        @include h6;
+                    }
+                    @media (min-width: map-get($grid-breakpoints, "xxl")) {
+                        @include h5;
+                    }
+                }
+            }
+        }
+        .teacher-wrapper{
+            padding: 32px 0 8px 0   ;
+            scroll-behavior: smooth;
+            scroll-margin: 76px;
+            @media (min-width: map-get($grid-breakpoints, "lg")) {
+                padding: 32px 0;
+            }
+
+            .teacher-top{
+                position: relative;
+                &::before{
+                    content: "";
+                    position: absolute;
+                    width: 80px;
+                    height: 100px;
+                    transform: skewX(-45deg);
+                    background: #fff;
+                    top: -12px;
+                    left: 30%;
+                    border-radius: $border-radius;
+                    background: linear-gradient(to right, $white, transparent);
+
+                }
+            }
+
+            h3{
+                text-align: center;
+                font-weight: 600;
+                color: $primary;
+                margin-bottom: 4px;
+                position: relative;
+                z-index: 1;
+                @media (min-width: map-get($grid-breakpoints, "lg")) {
+                 font-size: 34px;
+                }
+
+
+
+            }
+            h6{
+                text-align: center;
+                margin-bottom: 16px;
+                color: $gray-700;
+                position: relative;
+                z-index: 1;
+            }
+            .teacher-banner{
+                margin: 20px 0;
+                position: relative;
+
+                @media (min-width: map-get($grid-breakpoints, "lg")) {
+                    left: -30px;
+                }
+                .carousel{
+                    height: 180px;
+                    @media (min-width: map-get($grid-breakpoints, "sm")) {
+                        height: 250px;
+                    }
+                    @media (min-width: map-get($grid-breakpoints, "lg")) {
+                        height: 460px;
+                    }
+                    .carousel-control-prev, .carousel-control-next {
+                        width: 12%;
+                    }
+                    .carousel-inner{
+                        height: 100%;
+                        .carousel-item{
+                            height: 100%;
+                            img{
+                                display: block;
+                                object-fit: contain;
+                                object-position: center center;
+                                padding: 12px;
+                                border-radius: $border-radius-2xl;
+                                background: #000;
+                                width: 100%;
+                                height: 100%;
+                                margin: 0 auto;
+                                @media (min-width: map-get($grid-breakpoints, "lg")) {
+                                     padding: 20px;
+                                }
+                            }
+                        }
+                    }
+                }
+                img{
+                    &.teacher{
+                        padding: 0px;
+                        position: absolute;
+                        height: 76%;
+                        bottom: 0;
+                        right: 32px;
+                        object-fit: contain;
+                        object-position: bottom center;
+                        z-index: 10;
+                        pointer-events: none;
+
+                        @media (min-width: map-get($grid-breakpoints, "lg")) {
+                            right: -110px;
+                            height: 66%;
+                        }
+                    }
+                }
+            }
+
+            &:nth-child(even){
+                .teacher-banner{
+
+                    @media (min-width: map-get($grid-breakpoints, "lg")) {
+                        left: 30px;
+                    }
+                }
+                img.teacher {
+                    right: unset;
+                    left: 32px;
+                    @media (min-width: map-get($grid-breakpoints, "lg")) {
+                        left: -110px;
+                    }
+                }
+            }
+        }
+    }
+}

@@ -1,0 +1,490 @@
+main.features{
+    overflow-x: hidden;
+    overflow-y: hidden;
+    background: $bgc;
+    .kv-banner{
+        // min-height: 60vh;
+        background:  url("/assets/images/bg2.png"), radial-gradient(circle farthest-corner at left, $primary-600 , $primary-500 ,$primary-700);
+        background-size: cover;
+        position: relative;
+        display: flex;
+        align-items: center;
+        flex-direction: column;
+        background-repeat: no-repeat;
+        background-position: center center;
+        @media (min-width: map-get($grid-breakpoints, "lg")) {
+            // height: 90vh;
+        }
+
+        &:after{
+            content: '';
+            position: absolute;
+            bottom: -2px;
+            left: 0;
+            width: 100%;
+            height: 60px;
+            background: $bgc;
+            border-radius: 20px 20px 0 0 ;
+            @media (min-width: map-get($grid-breakpoints, "sm")) {
+                border-radius: 28px 28px 0 0 ;
+                height: 100px;
+            }
+            @media (min-width: map-get($grid-breakpoints, "lg")) {
+                border-radius: 36px 36px 0 0 ;
+                height: 168px;
+            }
+        }
+
+        &::before{
+            // content: '';
+            position: absolute;
+            bottom: -2px;
+
+            width: 50vw;
+            height: 50vw;
+            background:radial-gradient(circle, $primary-500 ,$primary-600);
+            border-radius: 100% ;
+
+
+        }
+        .wrapper-title{
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            flex-wrap: wrap;
+            padding: $body-py 8px 0 8px;
+
+            @media (min-width: map-get($grid-breakpoints, "xl")) {
+                padding: $body-py 16px 0 16px;
+            }
+
+        }
+
+        h1{
+            color: $white;
+
+            position: relative;
+            z-index: 2;
+            font-size: 34px;
+            text-shadow: 0px 0px 8px rgba($white, 0.2);
+            margin: 0px 8px;
+            @media (min-width: map-get($grid-breakpoints, "sm")) {
+                 font-size: 52px;
+
+            }
+            @media (min-width: map-get($grid-breakpoints, "xl")) {
+                font-size: 68px;
+
+            }
+        }
+        img{
+            width: 100vw;
+            position: relative;
+            z-index: 2;
+            margin: 0 auto;
+
+
+            @media (min-width: map-get($grid-breakpoints, "md")) {
+                width: 76vw;
+            }
+        }
+    }
+    .feature-wrapper{
+        h2{
+            @media (min-width: map-get($grid-breakpoints, "lg")) {
+                font-size: 48px;
+                font-weight: 600;
+                margin-bottom: 0;
+            }
+        }
+
+        &.market-analysis{
+            background: rgb(210, 227, 243);
+            // background: linear-gradient(130deg, #090e1c,#000);
+            padding: calc($body-py * 1 ) 0 ;
+            h2{
+                // color: $white;
+            }
+            h5{
+                // color: rgba($white, 0.7);
+            }
+            .info-card{
+                background: linear-gradient(140deg, rgb(255, 255, 255 , 0.8) 0%,rgb(255, 255, 255 , 1) 48%,rgba(227, 237, 246, 0.9),);
+                @media (min-width: map-get($grid-breakpoints, "lg")) {
+                    border-radius: 24px;
+                }
+                img{
+                    @media (min-width: map-get($grid-breakpoints, "lg")) {
+                        object-position: right center;
+                        height: 100%;
+                        width: 50%;
+                    }
+                }
+
+                &.card-l{
+                    min-height: 320px;
+                    img{
+                        height: 48%;
+                        width: 100%;
+                        opacity: 1;
+                    }
+
+                    @media (min-width: map-get($grid-breakpoints, "lg")) {
+                        min-height: 380px;
+
+                        img{
+                            height: 100%;
+                            right: -12%;
+                            width: 60%;
+                        }
+                    }
+                }
+                &.card-xl{
+                    min-height: 360px;
+                    img{
+                        height: 44%;
+                        bottom: 4px;
+                    }
+
+                    @media (min-width: map-get($grid-breakpoints, "lg")) {
+                        min-height: 380px;
+
+                        img{
+                            height: 100%;
+                            bottom: 16px;
+                        }
+                    }
+                }
+
+                h3{
+                    // color: $white;
+                    font-weight: 600;
+                    @media (min-width: map-get($grid-breakpoints, "lg")) {
+                        font-size: 32px;
+                    }
+                }
+
+                h6{
+                    // color: rgba($white, 0.7);
+                }
+            }
+        }
+        &.single-stock{
+            .row{
+                --bs-gutter-x: 1.6rem;
+            }
+            background: $white;
+            padding: calc($body-py * 1 ) 0 ;
+            .info-card{
+                background: $primary-50;
+                box-shadow:unset;
+                justify-content: flex-start;
+
+                h3{
+                    font-weight: 600;
+                }
+                h6{
+                    opacity: 0.8;
+                }
+
+                img{
+                    top: unset;
+                    transform: translateY(0);
+                    bottom: -12%;
+                    opacity: 0.95;
+                    height: 60%;
+
+
+                    @media (min-width: map-get($grid-breakpoints, "lg")) {
+                        height: 50%;
+                        bottom: 0%;
+                    }
+                    @media (min-width: map-get($grid-breakpoints, "xl")) {
+                        height: 80%;
+                    }
+
+                }
+                @media (min-width: map-get($grid-breakpoints, "lg")) {
+                    border-radius: 24px;
+                    margin-bottom: 24px;
+                }
+                &[data-card="1"]{
+                    @media (min-width: map-get($grid-breakpoints, "lg")) {
+                        min-height: 340px;
+                    }
+                }
+                &[data-card="2"]{
+                    background: #e7ffed;
+                    @media (min-width: map-get($grid-breakpoints, "lg")) {
+                        min-height: 340px;
+                    }
+                }
+                &[data-card="3"]{
+                    background: #e1e9f9;
+                }
+                &[data-card="4"]{
+                    background: #efefff;
+                }
+                &[data-card="5"]{
+                    background: #e6ebf0;
+                }
+
+                &.info-column{
+
+                    h6{
+                        width: 100%;
+                    }
+                    img{
+                        height: 66%;
+                        bottom: -14%;
+                        @media (min-width: map-get($grid-breakpoints, "lg")) {
+                            right: 0;
+                            height: 56%;
+                        }
+                        @media (min-width: map-get($grid-breakpoints, "xl")) {
+                            width: 100%;
+                        }
+                    }
+
+                }
+                &.info-third{
+                    background: rgba($primary-100 ,0.3);
+
+                }
+
+            }
+        }
+        &.others{
+            padding: calc($body-py * 1 ) 0  calc($body-py * 0.6 ) ;
+            .wrapper-title{
+                margin-bottom: calc(var(--body-y)* 0.2);
+            }
+
+            .info-card{
+                $card-gap: 16px;
+                background: $white ;
+                background: linear-gradient($white,rgba($white,0.2));
+                justify-content: flex-start;
+                margin-bottom: $card-gap;
+                min-height: 280px;
+                h6{
+                    width: 100%;
+                    color: $gray-700;
+                }
+                img{
+                    top: unset;
+                    transform: translateY(0);
+                    bottom: 0;
+                    height: 40%;
+                    opacity: 1;
+
+                    @media (min-width: map-get($grid-breakpoints, "lg")) {
+                        height: 60%;
+                        width: 100%;
+                    }
+
+                }
+                &[data-card="1"]{
+                    img{
+                        bottom: -16%;
+                        height: 70%;
+
+                        @media (min-width: map-get($grid-breakpoints, "lg")) {
+                            bottom: -2%;
+                        }
+                    }
+
+                }
+                &[data-card="2"], &[data-card="3"]{
+                    img{
+                        bottom: -8%;
+                        height: 64%;
+                        @media (min-width: map-get($grid-breakpoints, "lg")) {
+                            height: 55%;
+                            bottom: -4%;
+                        }
+                    }
+                }
+
+
+                @media (min-width: map-get($grid-breakpoints, "lg")) {
+                    $card-gap: 32px;
+                    margin-top: $card-gap;
+                    margin-bottom: $card-gap;
+                    border-radius: 24px;
+                    &[data-card="1"]{
+                        height: calc(100% - $card-gap - $card-gap);
+                        min-height: 420px;
+                    }
+                }
+
+            }
+
+        }
+
+    }
+
+    section.fixd-section{
+        position: fixed;
+        bottom: 0;
+        padding: 0 16px 16px 16px;
+        z-index: 10;
+        width: 100%;
+
+        button.fixd-btn{
+            background: transparent;
+            width: 100%;
+            @include btn-s;
+
+            a{
+                padding: 12px 24px;
+                width: 100%;
+                color: $white;
+                border-radius: $border-radius-xl;
+                @include h5;
+                font-weight: 600;
+                box-shadow: $box-shadow-m;
+
+
+            }
+            @media (min-width: map-get($grid-breakpoints, "md")) {
+                display: none;
+            }
+        }
+    }
+    nav{
+        position: fixed;
+        z-index: 20;
+        right: 16px;
+        bottom: 90px;
+        transition: 0.25s;
+        display: flex;
+        flex-direction: column;
+        align-items: flex-end;
+        &.show{
+            .anchor-list{
+                display: block;
+            }
+
+        }
+
+        @media (min-width: map-get($grid-breakpoints, "sm")) {
+            bottom: unset;
+            top: 50%;
+            right: -72px;
+            transform: translateY(-50%);
+            &:hover{
+                right: 0;
+            }
+        }
+        .anchor-list{
+            padding: 12px;
+            transition: 0.25s;
+            border-radius: $border-radius-xl;
+            background: rgba($white, 0.8);
+            backdrop-filter: blur(20px);
+            -moz-backdrop-filter: blur(20px);
+            -webkit-backdrop-filter: blur(20px);
+            display: none;
+            &:hover{
+                box-shadow: $box-shadow-lg;
+            }
+
+            @media (min-width: map-get($grid-breakpoints, "sm")) {
+                display: block;
+                border-radius: $border-radius-xl 0 0  $border-radius-xl;
+                background: rgba($white, 0);
+                box-shadow: unset;
+                backdrop-filter: unset;
+                -moz-backdrop-filter: unset;
+                -webkit-backdrop-filter: unset;
+
+                &:hover{
+
+                    background: rgba($white, 0.8);
+                    box-shadow: $box-shadow-lg;
+                    backdrop-filter: blur(20px);
+                    -moz-backdrop-filter: blur(20px);
+                    -webkit-backdrop-filter: blur(20px);
+
+                    .title{
+                        opacity: 1;
+                    }
+                }
+
+            }
+
+            li{
+                a{
+                    display: flex;
+                    align-items: center;
+                    padding: 8px 16px 8px 8px;
+                    border-radius: $border-radius-lg;
+
+
+                    .dot{
+                        transition: 0.25s;
+                        width: 12px;
+                        height: 12px;
+                        border: 2px solid $primary-200;
+                        background:  transparent;
+                        border-radius: 8px;
+                        margin: 8px 12px 8px 8px;
+                        box-shadow: $box-shadow-m;
+                        backdrop-filter: blur(10px);
+                        -moz-backdrop-filter: blur(10px);
+                        -webkit-backdrop-filter: blur(10px);
+                        position: relative;
+
+
+                    }
+                    .title{
+
+                        @include p;
+                        @media (min-width: map-get($grid-breakpoints, "sm")) {
+                            opacity: 0;
+                        }
+                    }
+
+
+                    &:hover{
+                        background: rgba($gray-200, 0.3);
+                        backdrop-filter: blur(10px);
+                        -moz-backdrop-filter: blur(10px);
+                        -webkit-backdrop-filter: blur(10px);
+
+                        .dot{
+                            border: 2px solid $primary-400;
+                        }
+                    }
+                }
+                &.active{
+                    a{
+                        .dot{
+                            background: rgba($primary-200, 1);
+                            border: 2px solid $primary-500;
+                        }
+                        .title{
+                            color: $primary;
+                        }
+                    }
+                }
+            }
+        }
+
+        button{
+            padding: 20px;
+            margin-top: 8px;
+            border-radius: 40px;
+            background: rgba($white, 0.8);
+            backdrop-filter: blur(10px);
+            -moz-backdrop-filter: blur(10px);
+            -webkit-backdrop-filter: blur(10px);
+            box-shadow: $box-shadow-m;
+            @media (min-width: map-get($grid-breakpoints, "sm")) {
+            display: none;
+
+            }
+        }
+    }
+}

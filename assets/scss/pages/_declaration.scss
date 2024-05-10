@@ -1,0 +1,38 @@
+main.declaration{
+    .container{
+        padding-top: 60px;
+        padding-bottom: $body-py;
+        background-color: $white;
+        h1{
+            text-align: center;
+            @media (min-width: map-get($grid-breakpoints, "lg")) {
+                  text-align: left;
+            }
+
+        }
+
+        ol{
+        list-style-type: decimal;
+        display: block;
+            li{
+                @include h6;
+                margin: 24px 0;
+                line-height: 160%;
+                color: $gray-800;
+                margin-left: 16px;
+                padding-left: 8px;
+
+                @media (min-width: map-get($grid-breakpoints, "lg")) {
+                    @include h5;
+                    margin: 30px 0;
+                    margin-left: 20px;
+                    padding-left: 8px;
+                }
+
+                &::marker{
+                    display: block;
+                }
+            }
+        }
+    }
+}

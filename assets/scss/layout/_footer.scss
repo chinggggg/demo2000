@@ -1,0 +1,165 @@
+footer{
+    background-color: $gray-700;
+    margin-top: 100px;
+
+    .content-wrapper{
+        padding-top: 40px ;
+        padding-bottom: 40px;
+
+        .footer-top{
+            .logo-wrapper{
+                margin-right: 28px;
+                img{
+                    width: 150px;
+                }
+            }
+            display: flex;
+            align-items: center;
+            flex-wrap: wrap;
+            margin-bottom: 40px;
+        }
+
+        .footer-link-wrapper{
+            display: flex;
+            flex-wrap: wrap;
+
+            ul{
+                width: 50%;
+                margin-bottom: 40px;
+                &.contact{
+                width: 100%;
+                    li{
+                        .footer-link{
+                        padding: 0;
+                    }
+                }
+                }
+                @media (min-width: map-get($grid-breakpoints, "md")) {
+                    width: unset;
+                    margin-right: 60px;
+                    margin-bottom: 0px;
+                    &.contact{
+                        width: unset;
+                    }
+                }
+
+
+
+            }
+            li{
+                font-weight: 600;
+                color: $gray-100;
+                margin-bottom: 8px;
+                .footer-link{
+                    display: flex;
+                    align-items: center;
+                    flex-wrap: wrap;
+                    font-weight: 400;
+                    padding: 8px 0;
+                    color: $gray-100;
+                    opacity: 0.8;
+                    &:hover{
+                       opacity: 1;
+                    }
+
+                    svg{
+                        width: 16px;
+                        height: 14px;
+                        margin-right: 8px;
+                        fill: $success;
+                    }
+                    span{
+                        margin: 8px 0;
+                        font-weight: 600;
+                    }
+                }
+            }
+        }
+
+        .social-group{
+            margin: 16px  auto 16px 0px;
+
+            button{
+                padding: 0;
+                background-color: transparent;
+                margin-right: 8px;
+                a{
+                    padding: 0;
+                    border-radius: 50px;
+                    overflow: hidden;
+                }
+            }
+
+            svg{
+                width: 40px;
+                height: 40px;
+
+                fill:$gray-600;
+                .cls-white{
+                    fill: $white;
+                }
+                rect,path{
+                    transition: 0.25s;
+                }
+
+                &:hover{
+                    .cls-fb{
+                        fill: #337fff;;
+                    }
+
+                    .cls-line{
+                        fill: #3ace01;
+                    }
+                    .cls-yt {
+                        fill: red;
+                    }
+                }
+            }
+        }
+        .download-group{
+            margin: 0 -4px;
+            button{
+                margin: 8px 4px;
+                @media (min-width: map-get($grid-breakpoints, "lg")) {
+                    svg{
+                        height: 42px;
+                    }
+                }
+            }
+        }
+    }
+    .systex-wrapper{
+         padding-top: 20px ;
+        padding-bottom: 20px;
+        @media (min-width: map-get($grid-breakpoints, "lg")) {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            text-align: right;
+        }
+
+        .systex-logo{
+            i{
+                display: block;
+
+                svg{
+                    height: 24px;
+                    width: auto;
+                    fill: $white;
+                }
+            }
+        }
+
+        small{
+            color: $gray-300;
+            display: block;
+        }
+    }
+    .line{
+        width: 100%;
+        height: 1px;
+        background: $gray-600;
+        margin: 0;
+    }
+}
+
